@@ -11,11 +11,11 @@ void init_timer0_ovf(void)
 	PORTB &=~(1<<PB5);
     TCCR0 =0x00;
     TCCR0 |= (1<<CS02);  //prescalare a 256
-    /* 16MHZ/1024=15625
-    1/15625=0,000064;
-    0,000064*155= 0,01 10 millisecondi; mi basta inizializzare tcnt0 a 100;
+    /* 16MHZ/256=62500
+    1/62500=0,000016;
+    0,000016*252= 0,01 10 millisecondi; mi basta inizializzare tcnt0 a 6 e aspettare 25 interrupt;
     */
-    TCNT0=6; // 20khz
+    TCNT0=6; 
 	
 }
 
