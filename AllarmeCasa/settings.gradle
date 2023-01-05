@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        repositories {
+            maven { url 'https://jitpack.io' }
+            maven {url "https://repo.eclipse.org/content/repositories/paho-releases/"}
+        }
+    }
+}
+rootProject.name = "AllarmeCasa"
+include ':app'
